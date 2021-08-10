@@ -1,0 +1,1137 @@
+#==================================================================
+# @@UI-Description: AD LDS user class and related classes.
+#
+# If the file name is changed, make sure the corresponding name is updated in the ParseLdifFile function in admin\adamsetup\install\ldifpage.cpp.
+# Make sure that the description is in sync with IDS_MS_ADAM_USER_LDF_DESCRIPTION in admin\adamsetup\install\resource.rc.
+#
+# This file contains user extensions for default ADAM schema.
+# It should be imported with the following command:
+#   ldifde -i -f MS-User.ldf -s server:port -b username domain password -k -j . -c "CN=Schema,CN=Configuration,DC=X" #schemaNamingContext
+#
+#==================================================================
+
+# Attributes
+
+dn: cn=Serial-Number, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Serial-Number
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=attributeCertificateAttribute, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: attributeCertificateAttribute
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Address, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Address
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Assistant, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Assistant
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Company, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Company
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Department, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Department
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Division, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Division
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=E-mail-Addresses, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: E-mail-Addresses
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Employee-ID, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Employee-ID
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Generation-Qualifier, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Generation-Qualifier
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Given-Name, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Given-Name
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Reports, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Reports
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Other-Name, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Other-Name
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Personal-Title, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Personal-Title
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Fax-Other, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Fax-Other
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Home-Primary, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Home-Primary
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Home-Other, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Home-Other
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Ip-Other, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Ip-Other
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Ip-Primary, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Ip-Primary
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-ISDN-Primary, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-ISDN-Primary
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Mobile-Other, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Mobile-Other
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Mobile-Primary, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Mobile-Primary
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Office-Other, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Office-Other
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Pager-Other, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Pager-Other
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Phone-Pager-Primary, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Phone-Pager-Primary
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Picture, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Picture
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Telex-Primary, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Telex-Primary
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Employee-Number, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Employee-Number
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=User-Comment, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: User-Comment
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Address-Home, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Address-Home
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Employee-Type, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Employee-Type
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Default-Class-Store, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Default-Class-Store
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Dynamic-LDAP-Server, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Dynamic-LDAP-Server
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Preferred-OU, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Preferred-OU
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=User-Parameters, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: User-Parameters
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=X509-Cert, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: X509-Cert
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=User-SMIME-Certificate, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: User-SMIME-Certificate
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=ms-Exch-Owner-BL, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: ms-Exch-Owner-BL
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Person, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Person
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Organizational-Person, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Organizational-Person
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=User, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: User
+m-dependencies: system
+m-dependencies: core
+
+dn: cn=Group-Of-Names, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: Group-Of-Names
+m-dependencies: system
+m-dependencies: core
+
+dn: ou=attributetypes, cn=Serial-Number, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=attributeCertificateAttribute, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Address, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Assistant, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Company, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Department, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Division, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=E-mail-Addresses, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Employee-ID, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Generation-Qualifier, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Given-Name, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Reports, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Other-Name, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Personal-Title, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Fax-Other, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Home-Primary, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Home-Other, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Ip-Other, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Ip-Primary, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-ISDN-Primary, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Mobile-Other, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Mobile-Primary, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Office-Other, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Pager-Other, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Phone-Pager-Primary, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Picture, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Telex-Primary, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Employee-Number, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=User-Comment, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Address-Home, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Employee-Type, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Default-Class-Store, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Dynamic-LDAP-Server, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Preferred-OU, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=User-Parameters, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=X509-Cert, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=User-SMIME-Certificate, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=ms-Exch-Owner-BL, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Person, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Organizational-Person, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=User, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: ou=attributetypes, cn=Group-Of-Names, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.1, ou=attributetypes, cn=Serial-Number, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.1
+m-name: Serial-Number
+m-description: serialNumber
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.2, ou=attributetypes, cn=attributeCertificateAttribute, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.2
+m-name: attributeCertificateAttribute
+m-description: A digitally signed or certified identity and set of attributes. Used to bind authorization information to an identity. X.509
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.3, ou=attributetypes, cn=Address, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.3
+m-name: Address
+m-description: Address
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.4, ou=attributetypes, cn=Assistant, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.4
+m-name: Assistant
+m-description: Assistant
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.5, ou=attributetypes, cn=Company, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.5
+m-name: Company
+m-description: Company
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.6, ou=attributetypes, cn=Department, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.6
+m-name: Department
+m-description: Department
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.7, ou=attributetypes, cn=Division, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.7
+m-name: Division
+m-description: Division
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.8, ou=attributetypes, cn=E-mail-Addresses, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.8
+m-name: E-mail-Addresses
+m-description: E-mail-Addresses
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.9, ou=attributetypes, cn=Employee-ID, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.9
+m-name: Employee-ID
+m-description: Employee-ID
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.10, ou=attributetypes, cn=Generation-Qualifier, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.10
+m-name: Generation-Qualifier
+m-description: Generation-Qualifier
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.11, ou=attributetypes, cn=Given-Name, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.11
+m-name: Given-Name
+m-description: Given-Name
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.12, ou=attributetypes, cn=Reports, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.12
+m-name: Reports
+m-description: Reports
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.13, ou=attributetypes, cn=Other-Name, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.13
+m-name: Other-Name
+m-description: Other-Name
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.14, ou=attributetypes, cn=Personal-Title, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.14
+m-name: Personal-Title
+m-description: Personal-Title
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.15, ou=attributetypes, cn=Phone-Fax-Other, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.15
+m-name: Phone-Fax-Other
+m-description: Phone-Fax-Other
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.16, ou=attributetypes, cn=Phone-Home-Primary, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.16
+m-name: Phone-Home-Primary
+m-description: Phone-Home-Primary
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.17, ou=attributetypes, cn=Phone-Home-Other, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.17
+m-name: Phone-Home-Other
+m-description: Phone-Home-Other
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.18, ou=attributetypes, cn=Phone-Ip-Other, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.18
+m-name: Phone-Ip-Other
+m-description: Phone-Ip-Other
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.19, ou=attributetypes, cn=Phone-Ip-Primary, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.19
+m-name: Phone-Ip-Primary
+m-description: Phone-Ip-Primary
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.20, ou=attributetypes, cn=Phone-ISDN-Primary, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.20
+m-name: Phone-ISDN-Primary
+m-description: Phone-ISDN-Primary
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.21, ou=attributetypes, cn=Phone-Mobile-Other, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.21
+m-name: Phone-Mobile-Other
+m-description: Phone-Mobile-Other
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.22, ou=attributetypes, cn=Phone-Mobile-Primary, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.22
+m-name: Phone-Mobile-Primary
+m-description: Phone-Mobile-Primary
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.23, ou=attributetypes, cn=Phone-Office-Other, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.23
+m-name: Phone-Office-Other
+m-description: Phone-Office-Other
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.24, ou=attributetypes, cn=Phone-Pager-Other, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.24
+m-name: Phone-Pager-Other
+m-description: Phone-Pager-Other
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.25, ou=attributetypes, cn=Phone-Pager-Primary, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.25
+m-name: Phone-Pager-Primary
+m-description: Phone-Pager-Primary
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.26, ou=attributetypes, cn=Picture, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.26
+m-name: Picture
+m-description: Picture
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.27, ou=attributetypes, cn=Telex-Primary, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.27
+m-name: Telex-Primary
+m-description: Telex-Primary
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.28, ou=attributetypes, cn=Employee-Number, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.28
+m-name: Employee-Number
+m-description: Employee-Number
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.29, ou=attributetypes, cn=User-Comment, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.29
+m-name: User-Comment
+m-description: User-Comment
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.30, ou=attributetypes, cn=Address-Home, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.30
+m-name: Address-Home
+m-description: Address-Home
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.31, ou=attributetypes, cn=Employee-Type, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.31
+m-name: Employee-Type
+m-description: Employee-Type
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.32, ou=attributetypes, cn=Default-Class-Store, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.32
+m-name: Default-Class-Store
+m-description: Default-Class-Store
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.33, ou=attributetypes, cn=Dynamic-LDAP-Server, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.33
+m-name: Dynamic-LDAP-Server
+m-description: Dynamic-LDAP-Server
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.34, ou=attributetypes, cn=Preferred-OU, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.34
+m-name: Preferred-OU
+m-description: Preferred-OU
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.35, ou=attributetypes, cn=User-Parameters, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.35
+m-name: User-Parameters
+m-description: User-Parameters
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.36, ou=attributetypes, cn=X509-Cert, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.36
+m-name: X509-Cert
+m-description: X509-Cert
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.37, ou=attributetypes, cn=User-SMIME-Certificate, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.37
+m-name: User-SMIME-Certificate
+m-description: User-SMIME-Certificate
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.38, ou=attributetypes, cn=ms-Exch-Owner-BL, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.38
+m-name: ms-Exch-Owner-BL
+m-description: ms-Exch-Owner-BL
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.39, ou=attributetypes, cn=Person, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.39
+m-name: Person
+m-description: Person
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.40, ou=attributetypes, cn=Organizational-Person, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.40
+m-name: Organizational-Person
+m-description: Organizational-Person
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.41, ou=attributetypes, cn=User, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.41
+m-name: User
+m-description: User
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.42, ou=attributetypes, cn=Group-Of-Names, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.42
+m-name: Group-Of-Names
+m-description: Group-Of-Names
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: ou=objectclasses, cn=Person, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: objectClasses
+
+dn: ou=objectclasses, cn=Organizational-Person, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: objectClasses
+
+dn: ou=objectclasses, cn=User, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: objectClasses
+
+dn: ou=objectclasses, cn=Group-Of-Names, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: objectClasses
+
+dn: m-oid=1.3.6.1.4.1.18060.17.2.1, ou=objectclasses, cn=Person, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.2.1
+m-description: Person
+m-supObjectClass: top
+m-typeObjectClass: STRUCTURAL
+m-must: cn
+m-may: userPassword
+m-may: telephoneNumber
+m-may: sn
+m-may: serialNumber
+m-may: seeAlso
+
+dn: m-oid=1.3.6.1.4.1.18060.17.2.2, ou=objectclasses, cn=Organizational-Person, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.2.2
+m-description: Organizational-Person
+m-supObjectClass: 2.5.6.6
+m-typeObjectClass: STRUCTURAL
+m-may: x121Address
+m-may: title
+m-may: telexNumber
+m-may: teletexTerminalIdentifier
+m-may: street
+m-may: st
+m-may: registeredAddress
+m-may: preferredDeliveryMethod
+m-may: postalCode
+m-may: postalAddress
+m-may: postOfficeBox
+m-may: physicalDeliveryOfficeName
+m-may: telephoneNumber
+m-may: title
+m-may: ou
+m-may: l
+m-may: internationalISDNNumber
+m-may: facsimileTelephoneNumber
+m-may: destinationIndicator
+
+dn: m-oid=1.3.6.1.4.1.18060.17.2.3, ou=objectclasses, cn=User, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.2.3
+m-description: User
+m-supObjectClass: 2.5.6.7
+m-typeObjectClass: STRUCTURAL
+m-must: cn
+m-may: x500uniqueIdentifier
+m-may: userSMIMECertificate
+m-may: userPKCS12
+m-may: uid
+m-may: secretary
+m-may: roomNumber
+m-may: preferredLanguage
+m-may: photo
+m-may: labeledURI
+m-may: jpegPhoto
+m-may: homePostalAddress
+m-may: givenName
+m-may: employeeType
+m-may: employeeNumber
+m-may: displayName
+m-may: departmentNumber
+m-may: carLicense
+m-may: audio
+m-may: pager
+m-may: o
+m-may: mobile
+m-may: manager
+m-may: mail
+m-may: initials
+m-may: homePhone
+m-may: businessCategory
+m-may: userCertificate
+
+dn: m-oid=1.3.6.1.4.1.18060.17.2.4, ou=objectclasses, cn=Group-Of-Names, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.2.4
+m-description: Group-Of-Names
+m-supObjectClass: top
+m-typeObjectClass: STRUCTURAL
+m-must: cn
+m-may: seeAlso
+m-may: owner
+m-may: ou
+m-may: o
+m-may: businessCategory
+m-may: member

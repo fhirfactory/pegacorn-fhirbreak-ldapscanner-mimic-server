@@ -1,0 +1,201 @@
+#==================================================================
+# @@UI-Description: AD LDS full userProxy class. Requires MS-User.LDF or MS-InetOrgPerson.LDF.
+#
+# If the file name is changed, make sure the corresponding name is updated in the ParseLdifFile function in admin\adamsetup\install\ldifpage.cpp.
+# Make sure that the description is in sync with IDS_MS_ADAM_USERPROXY_FULL_LDF_DESCRIPTION in admin\adamsetup\install\resource.rc.
+#
+# This file contains a sample userProxyFull class. 
+# Before importing this extension, make sure either MS-User.LDF or MS-InetOrgPerson.LDF are imported.
+# It should be imported with the following command:
+#   ldifde -i -f MS-UserProxyFull.ldf -s server:port -b username domain password -k -j . -c "CN=Schema,CN=Configuration,DC=X" #schemaNamingContext
+#
+#==================================================================
+
+# Attributes
+
+dn: cn=User-Proxy-Full, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: User-Proxy-Full
+m-dependencies: system
+m-dependencies: core
+
+dn: ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.43, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.43
+m-name: AGS
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.44, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.44
+m-name: section
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.45, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.45
+m-name: subSection
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.46, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.46
+m-name: businessUnit
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.47, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.47
+m-name: preferredFirstName
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.48, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.48
+m-name: branch
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.49, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.49
+m-name: jobTitle
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.51, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.51
+m-name: suffix
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.52, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.52
+m-name: IRN
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.18060.17.1.53, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.53
+m-name: GS1
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+
+dn: ou=objectclasses, cn=User-Proxy-Full, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: objectClasses
+
+dn: m-oid=1.3.6.1.4.1.18060.17.2.5, ou=objectclasses, cn=User-Proxy-Full, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.2.5
+m-description: User-Proxy-Full
+m-supObjectClass: top
+m-typeObjectClass: STRUCTURAL
+m-may: x500uniqueIdentifier
+m-may: userSMIMECertificate
+m-may: userPKCS12
+m-may: uid
+m-may: secretary
+m-may: roomNumber
+m-may: preferredLanguage
+m-may: photo
+m-may: labeledURI
+m-may: jpegPhoto
+m-may: homePostalAddress
+m-may: givenName
+m-may: employeeType
+m-may: employeeNumber
+m-may: displayName
+m-may: departmentNumber
+m-may: carLicense
+m-may: audio
+m-may: pager
+m-may: o
+m-may: mobile
+m-may: manager
+m-may: mail
+m-may: initials
+m-may: homePhone
+m-may: businessCategory
+m-may: userCertificate
+m-may: AGS
+m-may: section
+m-may: subSection
+m-may: businessUnit
+m-may: division
+m-may: branch
+m-may: preferredFirstName
+m-may: jobTitle
+m-may: personalTitle
+m-may: suffix
+m-may: IRN
+m-may: GS1
+m-supobjectclass: organizationalPerson
