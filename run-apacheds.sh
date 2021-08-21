@@ -19,25 +19,22 @@ sleep 10
 # Configure Keystore
 echo 'Starting TLS...'
 
-ldapmodify -h 127.0.0.1 -p 10389 -D uid=admin,ou=system -w secret <<EOF
+ldapmodify -h 127.0.0.1 -p 10389 -D ${BIND_DN} -w secret <<EOF
 dn: ads-serverId=ldapServer,ou=servers,ads-directoryServiceId=default,ou=config
 changeType: modify
 replace: ads-keystoreFile
 ads-keystoreFile: /etc/ssl/certs/${KUBERNETES_SERVICE_NAME}.${MY_POD_NAMESPACE}.jks
 -
 replace: ads-certificatePassword
-ads-certificatePassword: $APACHEDS_TLS_KS_PWD
+ads-certificatePassword: ${APACHEDS_TLS_KS_PWD}
 -
 EOF
 
-# Change default password
-echo 'Setting admin password'
-
-ldapmodify -h 127.0.0.1 -p 10389 -D uid=admin,ou=system -w secret <<EOF
-dn: uid=admin,ou=system
+ldapmodify -h 127.0.0.1 -p 10389 -D ${BIND_DN} -w secret <<EOF
+dn: ${BIND_DN}
 changeType: modify
 replace: userPassword
-userPassword: $APACHEDS_ROOT_PASSWORD
+userPassword: ${BIND_PASSWORD}
 -
 EOF
 
