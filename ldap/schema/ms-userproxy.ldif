@@ -145,6 +145,18 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
+dn: m-oid=1.3.6.1.4.1.18060.17.1.55, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.55
+m-name: sAMAccountName
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
 
 dn: ou=objectclasses, cn=User-Proxy-Full, ou=schema
 objectclass: organizationalUnit
@@ -198,4 +210,6 @@ m-may: personalTitle
 m-may: suffix
 m-may: IRN
 m-may: GS1
+m-may: sAMAccountName
+m-may: TITLE
 m-supobjectclass: organizationalPerson
