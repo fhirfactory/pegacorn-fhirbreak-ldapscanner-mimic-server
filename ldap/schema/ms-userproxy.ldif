@@ -13,19 +13,19 @@
 
 # Attributes
 
-dn: cn=User-Proxy-Full, ou=schema
+dn: cn=userProxyFull, ou=schema
 objectclass: metaSchema
 objectclass: top
-cn: User-Proxy-Full
+cn: userProxyFull
 m-dependencies: system
 m-dependencies: core
 
-dn: ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: organizationalUnit
 objectclass: top
 ou: attributetypes
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.43, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.43, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -37,7 +37,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.44, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.44, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -49,7 +49,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.45, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.45, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -61,7 +61,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.46, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.46, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -73,7 +73,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.47, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.47, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -85,7 +85,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.48, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.48, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -97,7 +97,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.49, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.49, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -109,7 +109,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.51, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.51, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -121,7 +121,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.52, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.52, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -133,7 +133,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.53, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.53, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -145,7 +145,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.55, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.55, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -157,7 +157,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.56, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.56, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -169,7 +169,7 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: m-oid=1.3.6.1.4.1.18060.17.1.57, ou=attributetypes, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.57, ou=attributetypes, cn=userProxyFull, ou=schema
 objectclass: metaAttributeType
 objectclass: metaTop
 objectclass: top
@@ -181,19 +181,32 @@ m-substr: caseIgnoreSubstringsMatch
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
 m-singleValue: TRUE
 
-dn: ou=objectclasses, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.1.58, ou=attributetypes, cn=userProxyFull, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.18060.17.1.58
+m-name: objectCategory
+m-description: Sample user proxy class with the same properties as the native user class.
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: ou=objectclasses, cn=userProxyFull, ou=schema
 objectclass: organizationalUnit
 objectclass: top
 ou: objectClasses
 
-dn: m-oid=1.3.6.1.4.1.18060.17.2.5, ou=objectclasses, cn=User-Proxy-Full, ou=schema
+dn: m-oid=1.3.6.1.4.1.18060.17.2.5, ou=objectclasses, cn=userProxyFull, ou=schema
 objectclass: metaObjectClass
 objectclass: metaTop
 objectclass: top
+m-name: userProxyFull
 m-oid: 1.3.6.1.4.1.18060.17.2.5
-m-description: User-Proxy-Full
-m-supObjectClass: top
+m-description: userProxyFull
 m-typeObjectClass: STRUCTURAL
+m-supObjectClass: organizationalPerson
 m-may: x500uniqueIdentifier
 m-may: userSMIMECertificate
 m-may: userPKCS12
@@ -239,4 +252,5 @@ m-may: department
 m-may: streetAddress
 m-may: extensionAttribute4
 m-may: SUBDEPT
-m-supobjectclass: organizationalPerson
+m-may: objectCategory
+
