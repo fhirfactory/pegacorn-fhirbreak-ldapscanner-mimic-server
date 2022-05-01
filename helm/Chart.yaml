@@ -1,0 +1,8 @@
+---
+name: pegacorn-fhirbreak-ldapscanner-mimic-server
+sources:
+- https://github.com/apache/directory-fortress-core
+version: 1.0.0-SNAPSHOT
+version: 1.0.0-SNAPSHOT
+description: ApacheDS LDAP server.
+icon: img/icons/camel.svg
